@@ -5,7 +5,8 @@ const SpeakerSection = () => {
   return (
     <div>
       <h2>SpeakerSection Section</h2>
-      <p>This is the content for the Settings section.</p>
+      <p>prepare to accept an array of speakers and each individual speaker has a color asssigned to it .......
+        for now use a placeholder.....create a custom list of characters</p>
     </div>
   );
 }

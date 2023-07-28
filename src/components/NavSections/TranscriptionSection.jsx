@@ -5,7 +5,7 @@ const TranscriptionSection = () => {
   return (
     <div>
       <h2>TranscriptionSection Section</h2>
-      <p>This is the content for the Settings section.</p>
+      <p>add 2 botons , AutoTranscritp , Upload subtitile</p>
     </div>
   );
 }

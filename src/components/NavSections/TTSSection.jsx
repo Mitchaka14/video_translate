@@ -5,7 +5,7 @@ const TTSSection = () => {
   return (
     <div>
       <h2>TTSSection Section</h2>
-      <p>This is the content for the Settings section.</p>
+      <p>This will be a loading screen with a loading animation</p>
     </div>
   );
 }

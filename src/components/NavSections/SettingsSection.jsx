@@ -5,7 +5,7 @@ const SettingsSection = () => {
   return (
     <div>
       <h2>Settings Section</h2>
-      <p>This is the content for the Settings section.</p>
+      <p>skip this for now</p>
     </div>
   );
 }
