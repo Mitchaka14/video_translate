@@ -1,38 +1,212 @@
-.App {
+/* ====================== Global Styles ====================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* ====================== App Styles ====================== */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ====================== Header Styles ====================== */
+
+.header {
+  background-color: #000000;
+  color: white;
+  padding: 20px;
   text-align: center;
+  font-size: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ====================== Main Content Styles ====================== */
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  width: 100%;
+  /* Align your items in a row and give equal space around them */
+  align-items: stretch;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.common-style {
+  background-color: #333333;
+  border-top: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ====================== Navbar Styles ====================== */
+
+.navbar {
+  flex: 1;
+  color: #ffffff;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.navbar .nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar .nav-link .section-title {
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar .nav-link:hover .section-title {
+  visibility: visible;
+}
+
+.navbar .nav-link.scrollto.active {
+  background-color: #525252;
+}
+
+.navbar .nav-link .icon-container {
+  width: 40px;
+  height: 40px;
+  background-color: #121212;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.navbar .nav-link svg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+/* ====================== Nav Content Styles ====================== */
+
+.nav-content {
+  flex: 5;
+  padding: 20px;
+  background-color: #333333;
+}
+
+/* ====================== Video Preview Styles ====================== */
+
+.video-area {
+  flex: 10;
+  background-color: #000000;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-preview {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.video-preview video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sliders-area {
+  width: 100%;
+  height:10%;
+  background-color: #242424;
+  border-top: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.video-controller {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px;
+}
+
+
+.slider-container {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* ====================== Footer Styles ====================== */
+
+footer {
+  background-color: #000000;
   color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: none;
+}
+.content-group {
+  display: flex;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* ====================== Responsive Styles ====================== */
+
+@media screen and (max-width: 768px) {
+
+  /* ====================== Main Content Styles ====================== */
+  .main-content {
+    flex-direction: row; /* Keep the direction as row, not column */
+  }
+
+  /* ====================== Navbar Styles ====================== */
+  .navbar {
+    flex: none; /* Disables the default flex behavior */
+    width: 9%; /* Sets the navbar width to 10% */
+  }
+
+  /* ====================== Video Preview Styles ====================== */
+  .video-area {
+    flex: 1; /* The rest of the space shared */
+    order: 1; 
+  }
+
+  /* ====================== Nav Content Styles ====================== */
+  .nav-content {
+    flex: 1; /* The rest of the space shared */
+    order: 2;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ====================== End of Styles ====================== */
